@@ -1,5 +1,11 @@
 import { division } from "../src/division";
 
-test('deve multiplicar dois numeros', () => {
-    expect(division(6, 2)).toBe(3);
+describe("Função dividir", () => {
+    it("deve dividir corretamente", () => {
+        expect(division(10,2)).toBe(5);
+    })
+
+    it("deve dar erro", () => {
+        expect(() => division(10,0)).toThrow();
+    })
 })
